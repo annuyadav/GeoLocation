@@ -1,0 +1,14 @@
+language: ruby
+sudo: false
+env:
+  global:
+    - JRUBY_OPTS=--2.0
+  matrix:
+    - DB=
+    - DB=sqlite
+    - DB=sqlite USE_SQLITE_EXT=1
+    - DB=postgres
+    - DB=mysql
+rvm:
+  - 2.2.1
+before_install: gem install bundler -v 1.10.6
